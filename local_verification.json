@@ -1,0 +1,9 @@
+{
+  "checked_at_utc": "2026-11-17T02:20:40.492660+00:00",
+  "historical_holdout_rows": 6000,
+  "browser_python_max_absolute_error": 0.0,
+  "synthetic_and_boundary_references": 165,
+  "node_tests_passed": 7,
+  "remote_space_verified": false,
+  "github_actions_verified": false
+}

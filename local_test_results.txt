@@ -1,0 +1,15 @@
+✔ browser predictions match all Python synthetic and boundary references (9.431296ms)
+✔ field ordering is explicit (0.680493ms)
+✔ legacy category codes use the same mapping as training (0.184558ms)
+✔ invalid input is rejected (0.753532ms)
+✔ missing and extra fields are rejected (0.189305ms)
+✔ negative statement balances remain valid (0.130526ms)
+✔ review labels agree with the recorded threshold (2.864386ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 101.6944

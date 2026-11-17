@@ -1,0 +1,6 @@
+{
+  "name": "credit-risk-static-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {"test": "node --test test_browser.mjs"}
+}
