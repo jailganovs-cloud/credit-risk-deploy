@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Credit Risk Model Demonstration</title>
+<style>
+:root{color-scheme:light;font-family:Arial,sans-serif;color:#172b3c;background:#f4f6f8}*{box-sizing:border-box}body{margin:0}main{max-width:1100px;margin:auto;padding:36px 24px 60px}header{margin-bottom:28px}.eyebrow{font-size:12px;letter-spacing:.12em;font-weight:bold;color:#547181}h1{font-size:36px;letter-spacing:-.03em;margin:12px 0}h2{font-size:21px;margin:0 0 18px}p{line-height:1.6;color:#506474}.status{display:inline-block;border:1px solid #b6d6cb;color:#226c55;padding:6px 10px;border-radius:20px;font-size:12px}.panel{background:white;border:1px solid #dce4e9;border-radius:14px;padding:24px;margin:18px 0}.fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}label{display:block;font-size:13px;font-weight:bold}input,select{width:100%;margin-top:8px;border:1px solid #bdcbd4;border-radius:7px;padding:11px;font:inherit;color:inherit;background:#fff}input:focus,select:focus,button:focus-visible{outline:3px solid #7cb5d9;outline-offset:2px}details{border-top:1px solid #e2e8ec;padding:16px 0}summary{cursor:pointer;font-weight:bold;margin-bottom:12px}.hint{font-size:12px;font-weight:normal;color:#6b7e8a;display:block;margin-top:6px}button{border:1px solid #b9cbd7;border-radius:7px;padding:12px 16px;cursor:pointer;font:inherit;background:white;color:#174564}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}.primary{background:#124f72;color:white;border-color:#124f72;font-weight:bold}.primary:disabled{opacity:.5;cursor:wait}.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.score{font-size:42px;color:#174f71;font-weight:bold;margin:8px 0}.flag{font-size:22px;font-weight:bold;margin:16px 0;color:#174f71}.error{color:#a12727;font-weight:bold}footer{font-size:12px;line-height:1.7;color:#687c89;margin-top:28px}a{color:#17577b}@media(max-width:680px){main{padding:24px 16px}h1{font-size:29px}.fields,.result-grid{grid-template-columns:1fr}.panel{padding:18px}}
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">MODULE 10 · CREDIT RISK</div><h1>Credit risk model demonstration</h1>
+<p>Explore a tuned decision tree with fictional account information. All amounts use New Taiwan dollars (NT$).</p>
+<span class="status">Predictions run in your browser</span></header>
+<form id="form" novalidate>
+<section class="panel"><h2>Account information</h2><div class="fields" id="account"></div></section>
+<section class="panel"><h2>Six months of payment history</h2><p>Most recent to oldest, following the September to April 2005 source schema. PAY_0 is the most recent month; there is no PAY_1 field.</p><div id="months"></div></section>
+<div class="actions"><button type="button" id="example-regular">Example with no recorded delays</button><button type="button" id="example-delayed">Example with recent delays</button><button class="primary" type="submit" id="predict" disabled>Loading model…</button></div>
+<p id="error" class="error" role="alert"></p></form>
+<section class="panel" aria-live="polite" aria-atomic="true"><h2>Model result</h2><div class="result-grid"><div><label>Uncalibrated model score</label><div class="score" id="score">—</div></div><div><label>Review status</label><div class="flag" id="flag">Enter an example to begin</div></div></div><p>A score of 0.50 or higher produces a review flag. The class-weighted score is not a validated individual default probability. This demonstration makes no credit approval decision.</p></section>
+<footer>Use fictional inputs. This app does not send your form values to a prediction server or save them in browser storage. Hosting infrastructure may retain ordinary request metadata.<br>Source: Yeh (2009), <a href="https://doi.org/10.24432/C55S3H" target="_blank" rel="noreferrer">Default of Credit Card Clients</a>, UCI, CC BY 4.0. Historical Taiwan data do not establish suitability for another population.</footer>
+</main><script type="module" src="ui.js"></script></body></html>
